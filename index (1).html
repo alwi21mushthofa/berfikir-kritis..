@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPI PAI XI - Q.S. Ali 'Imran 190-191 | Alwi Mushthofa, S.Pd.I., M.Pd.</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        .font-arabic {
+            font-family: 'Amiri', serif;
+            line-height: 2.2;
+        }
+        .tab-btn.active {
+            background-color: #0d9488;
+            color: #ffffff;
+            border-color: #0d9488;
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="bg-gradient-to-r from-teal-800 via-emerald-800 to-teal-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-teal-600/50 backdrop-blur border border-teal-400/30 flex items-center justify-center text-2xl shadow-inner">
+                    <i class="fa-solid font-bold fa-book-quran text-amber-300"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg md:text-xl font-bold tracking-wide">MPI PAI & Budi Pekerti</h1>
+                    <p class="text-xs text-teal-200">SMA Negeri 1 Depok Yogyakarta • Pengampu: <strong>Alwi Mushthofa, S.Pd.I., M.Pd.</strong></p>
+                </div>
+            </div>
+            <div class="bg-teal-900/60 backdrop-blur px-4 py-2 rounded-lg border border-teal-700/50 text-xs md:text-sm text-teal-100 flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap text-amber-400"></i>
+                <span>Materi: <strong>Q.S. Ali 'Imran: 190-191 (Berpikir Kritis)</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
+
+        <!-- TABS MENU -->
+        <nav class="flex flex-wrap gap-2 mb-8 border-b border-slate-200 pb-4 justify-center md:justify-start">
+            <button onclick="switchTab('pendahuluan')" id="tab-pendahuluan" class="tab-btn active px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:bg-teal-50 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-house"></i> Pendahuluan
+            </button>
+            <button onclick="switchTab('ayat')" id="tab-ayat" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:bg-teal-50 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-quran"></i> Teks Ayat & Terjemah
+            </button>
+            <button onclick="switchTab('tajwid')" id="tab-tajwid" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:bg-teal-50 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-spell-check"></i> Analisis Tajwid & Audio
+            </button>
+            <button onclick="switchTab('ulilalbab')" id="tab-ulilalbab" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:bg-teal-50 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-brain"></i> Konsep Ulil Albab
+            </button>
+            <button onclick="switchTab('opini')" id="tab-opini" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:bg-teal-50 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-lightbulb"></i> Opini Berpikir Kritis
+            </button>
+            <button onclick="switchTab('aktivitas')" id="tab-aktivitas" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:bg-teal-50 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-users-gear"></i> Aktivitas Siswa
+            </button>
+            <button onclick="switchTab('kuis')" id="tab-kuis" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:bg-teal-50 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-pen-to-square"></i> Kuis 10 Soal
+            </button>
+        </nav>
+
+        <!-- CONTENT SECTIONS -->
+
+        <!-- 1. PENDAHULUAN -->
+        <section id="content-pendahuluan" class="tab-content space-y-6">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/80">
+                <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
+                    <div class="p-3 bg-teal-100 text-teal-800 rounded-xl">
+                        <i class="fa-solid fa-chalkboard-user text-2xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Pengantar Media Pembelajaran Interaktif (MPI)</h2>
+                        <p class="text-slate-500 text-sm">Pendidikan Agama Islam dan Budi Pekerti • SMAN 1 Depok Yogyakarta</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="p-5 bg-emerald-50 rounded-xl border border-emerald-100">
+                        <div class="flex items-center gap-3 text-emerald-800 font-bold mb-2">
+                            <i class="fa-solid fa-bullseye"></i> Capaian Pembelajaran
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Peserta didik mampu menganalisis Q.S. Ali 'Imran: 190-191 tentang berpikir kritis dan Ulil Albab, menerapkan hukum bacaan tajwid secara benar, serta membiasakan sikap kritis dan rasional yang dilandasi iman.
+                        </p>
+                    </div>
+                    <div class="p-5 bg-teal-50 rounded-xl border border-teal-100">
+                        <div class="flex items-center gap-3 text-teal-800 font-bold mb-2">
+                            <i class="fa-solid fa-compass"></i> Tujuan Pembelajaran
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                            <li>Membaca & menghafal Q.S. Ali 'Imran: 190-191 secara tartil.</li>
+                            <li>Menganalisis hukum tajwid pada ayat tersebut.</li>
+                            <li>Menjelaskan definisi dan ciri-ciri <em>Ulil Albab</em>.</li>
+                            <li>Menerapkan berpikir kritis dalam kehidupan sehari-hari.</li>
+                        </ul>
+                    </div>
+                    <div class="p-5 bg-amber-50 rounded-xl border border-amber-100">
+                        <div class="flex items-center gap-3 text-amber-800 font-bold mb-2">
+                            <i class="fa-solid fa-school"></i> Profil Pelajar Pancasila
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Mewujudkan peserta didik SMAN 1 Depok Yogyakarta yang <strong>Beriman, Bertaqwa kepada Tuhan YME, Berakhlak Mulia</strong>, serta berjiwa <strong>Bernalar Kritis</strong> dan <strong>Mandiri</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-6 rounded-2xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-2 text-amber-400">Pesan Pengampu PAI</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            "Anak-anakku kelas XI SMAN 1 Depok Yogyakarta yang dibanggakan, Islam tidak pernah memisahkan antara keimanan dan daya nalar. Melalui surah Ali 'Imran ayat 190-191, Allah SWT secara tegas memanggil kita untuk menggunakan akal pikiran, mengamati fenomena alam, dan menjadi Ulil Albab—pribadi unggul yang tajam analisisnya dan kukuh zikirnya."
+                        </p>
+                        <span class="text-xs bg-amber-500/20 text-amber-300 px-3.5 py-1.5 rounded-full border border-amber-400/30 font-semibold inline-flex items-center gap-1.5">
+                            <i class="fa-solid fa-user-tie"></i> Alwi Mushthofa, S.Pd.I., M.Pd. • Guru PAI SMAN 1 Depok Yogyakarta
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. TEKS AYAT & AUDIO -->
+        <section id="content-ayat" class="tab-content space-y-6 hidden">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/80">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 pb-4 border-b border-slate-100">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Q.S. Ali 'Imran (3): 190 - 191</h2>
+                        <p class="text-slate-500 text-sm">Teks Arab, Transliterasi Latin, Terjemahan Kementerian Agama RI</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="playFullAyahAudio()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-semibold flex items-center gap-2 shadow-md transition-all">
+                            <i class="fa-solid fa-play"></i> Putar Tilawah Lengkap (190-191)
+                        </button>
+                        <button onclick="stopAudio()" class="px-3 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-xl text-sm font-semibold flex items-center gap-1 transition-all">
+                            <i class="fa-solid fa-stop"></i> Stop Audio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AYAT 190 -->
+                <div class="mb-8 p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-teal-800 text-white text-xs font-bold rounded-lg">Ayat 190</span>
+                        <button onclick="playAyahAudio('190')" class="text-xs bg-teal-100 hover:bg-teal-200 text-teal-800 px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1">
+                            <i class="fa-solid fa-volume-high"></i> Dengarkan Ayat 190
+                        </button>
+                    </div>
+                    <p class="font-arabic text-2xl md:text-3xl text-right text-slate-800 tracking-wide leading-loose mb-6 dir-rtl" dir="rtl">
+                        إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الْأَلْبَابِ
+                    </p>
+                    <div class="space-y-2 border-t border-slate-200 pt-4">
+                        <p class="text-xs text-teal-800 font-semibold italic">Latin:</p>
+                        <p class="text-sm text-slate-700 italic font-mono bg-white p-3 rounded-lg border border-slate-200">
+                            "Inna fī khalqis-samāwāti wal-arḍi wakhtilāfil-laili wan-nahāri la'āyātil li'ulil-albāb."
+                        </p>
+                        <p class="text-xs text-teal-800 font-semibold mt-3">Terjemahan:</p>
+                        <p class="text-sm text-slate-700 leading-relaxed bg-emerald-50/60 p-3 rounded-lg border border-emerald-100">
+                            "Sesungguhnya dalam penciptaan langit dan bumi, dan pergantian malam dan siang terdapat tanda-tanda (kebesaran Allah) bagi orang yang berakal (Ulil Albab)."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- AYAT 191 -->
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="px-3 py-1 bg-teal-800 text-white text-xs font-bold rounded-lg">Ayat 191</span>
+                        <button onclick="playAyahAudio('191')" class="text-xs bg-teal-100 hover:bg-teal-200 text-teal-800 px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1">
+                            <i class="fa-solid fa-volume-high"></i> Dengarkan Ayat 191
+                        </button>
+                    </div>
+                    <p class="font-arabic text-2xl md:text-3xl text-right text-slate-800 tracking-wide leading-loose mb-6 dir-rtl" dir="rtl">
+                        الَّذِينَ يَذْكُرُونَ اللَّهَ قِيَامًا وَقُعُودًا وَعَلَىٰ جُنُوبِهِمْ وَيَتَفَكَّرُونَ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ رَبَّنَا مَا خَلَقْتَ هَٰذَا بَاطِلًا سُبْحَانَكَ فَقِنَا عَذَابَ النَّارِ
+                    </p>
+                    <div class="space-y-2 border-t border-slate-200 pt-4">
+                        <p class="text-xs text-teal-800 font-semibold italic">Latin:</p>
+                        <p class="text-sm text-slate-700 italic font-mono bg-white p-3 rounded-lg border border-slate-200">
+                            "(Yaitu) orang-orang yang mengingat Allah sambil berdiri, duduk, atau dalam keadaan berbaring, dan mereka memikirkan tentang penciptaan langit dan bumi (seraya berkata), 'Ya Tuhan kami, tidaklah Engkau menciptakan semua ini sia-sia; Mahasuci Engkau, lindungilah kami dari azab neraka'."
+                        </p>
+                        <p class="text-xs text-teal-800 font-semibold mt-3">Terjemahan:</p>
+                        <p class="text-sm text-slate-700 leading-relaxed bg-emerald-50/60 p-3 rounded-lg border border-emerald-100">
+                            "(Yaitu) orang-orang yang mengingat Allah sambil berdiri, duduk atau dalam keadaan berbaring, dan mereka memikirkan tentang penciptaan langit dan bumi (seraya berkata): 'Ya Tuhan kami, tidaklah Engkau menciptakan semua ini sia-sia; Mahasuci Engkau, maka peliharalah kami dari azab neraka'."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ANALISIS TAJWID & AUDIO -->
+        <section id="content-tajwid" class="tab-content space-y-6 hidden">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/80">
+                <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
+                    <div class="p-3 bg-amber-100 text-amber-800 rounded-xl">
+                        <i class="fa-solid fa-spell-check text-2xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Analisis Hukum Bacaan Tajwid</h2>
+                        <p class="text-slate-500 text-sm">Klik tombol audio untuk mendengarkan simulasi pelafalan potong kata dan hukum tajwidnya</p>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-teal-800 text-white text-xs uppercase tracking-wider">
+                                <th class="p-3.5 rounded-tl-xl">No</th>
+                                <th class="p-3.5">Lafaz (Potongan Ayat)</th>
+                                <th class="p-3.5">Hukum Tajwid</th>
+                                <th class="p-3.5">Sebab / Alasan</th>
+                                <th class="p-3.5">Cara Membaca</th>
+                                <th class="p-3.5 text-center rounded-tr-xl">Audio Pelafalan</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-sm">
+                            <tr class="hover:bg-slate-50 transition-all">
+                                <td class="p-3.5 font-bold text-slate-500">1</td>
+                                <td class="p-3.5 font-arabic text-xl text-teal-900 font-bold">إِنَّ</td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 bg-rose-100 text-rose-800 rounded-md font-semibold text-xs">Ghunnah</span></td>
+                                <td class="p-3.5 text-xs text-slate-600">Huruf Nun bertasydid (نَّ)</td>
+                                <td class="p-3.5 text-xs text-slate-600">Dengung ditahan 2 ketukan / harakat</td>
+                                <td class="p-3.5 text-center">
+                                    <button onclick="playTajwidSpeech('إِنَّ', 'Ghunnah')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1 mx-auto transition-all">
+                                        <i class="fa-solid fa-volume-low"></i> Dengar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-all">
+                                <td class="p-3.5 font-bold text-slate-500">2</td>
+                                <td class="p-3.5 font-arabic text-xl text-teal-900 font-bold">فِي خَلْقِ</td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded-md font-semibold text-xs">Mad Thabi'i</span></td>
+                                <td class="p-3.5 text-xs text-slate-600">Huruf Ya sukun (يْ) didahului harakat kasrah</td>
+                                <td class="p-3.5 text-xs text-slate-600">Dibaca panjang 2 harakat (1 alif)</td>
+                                <td class="p-3.5 text-center">
+                                    <button onclick="playTajwidSpeech('فِي خَلْقِ', 'Mad Thabii')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1 mx-auto transition-all">
+                                        <i class="fa-solid fa-volume-low"></i> Dengar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-all">
+                                <td class="p-3.5 font-bold text-slate-500">3</td>
+                                <td class="p-3.5 font-arabic text-xl text-teal-900 font-bold">السَّمَاوَاتِ</td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 bg-sky-100 text-sky-800 rounded-md font-semibold text-xs">Alif Lam Syamsiyah</span></td>
+                                <td class="p-3.5 text-xs text-slate-600">Alif Lam bertemu huruf Syamsiyah (Sin / س)</td>
+                                <td class="p-3.5 text-xs text-slate-600">Alif Lam dileburkan langsung masuk ke huruf Sin</td>
+                                <td class="p-3.5 text-center">
+                                    <button onclick="playTajwidSpeech('السَّمَاوَاتِ', 'Alif Lam Syamsiyah')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1 mx-auto transition-all">
+                                        <i class="fa-solid fa-volume-low"></i> Dengar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-all">
+                                <td class="p-3.5 font-bold text-slate-500">4</td>
+                                <td class="p-3.5 font-arabic text-xl text-teal-900 font-bold">وَالْأَرْضِ</td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 bg-indigo-100 text-indigo-800 rounded-md font-semibold text-xs">Alif Lam Qamariyah</span></td>
+                                <td class="p-3.5 text-xs text-slate-600">Alif Lam bertemu huruf Qamariyah (Hamzah / أ)</td>
+                                <td class="p-3.5 text-xs text-slate-600">Alif Lam dibaca jelas (izhar)</td>
+                                <td class="p-3.5 text-center">
+                                    <button onclick="playTajwidSpeech('وَالْأَرْضِ', 'Alif Lam Qamariyah')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1 mx-auto transition-all">
+                                        <i class="fa-solid fa-volume-low"></i> Dengar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-all">
+                                <td class="p-3.5 font-bold text-slate-500">5</td>
+                                <td class="p-3.5 font-arabic text-xl text-teal-900 font-bold">وَالنَّهَارِ</td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 bg-rose-100 text-rose-800 rounded-md font-semibold text-xs">Ghunnah & Syamsiyah</span></td>
+                                <td class="p-3.5 text-xs text-slate-600">Alif Lam bertemu Nun bertasydid</td>
+                                <td class="p-3.5 text-xs text-slate-600">Dilebur ke Nun dan didengungkan 2 harakat</td>
+                                <td class="p-3.5 text-center">
+                                    <button onclick="playTajwidSpeech('وَالنَّهَارِ', 'Ghunnah dan Syamsiyah')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1 mx-auto transition-all">
+                                        <i class="fa-solid fa-volume-low"></i> Dengar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-all">
+                                <td class="p-3.5 font-bold text-slate-500">6</td>
+                                <td class="p-3.5 font-arabic text-xl text-teal-900 font-bold">لَآيَاتٍ لِّأُولِي</td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 bg-amber-100 text-amber-800 rounded-md font-semibold text-xs">Idgham Bilaghunnah</span></td>
+                                <td class="p-3.5 text-xs text-slate-600">Tanwin (Kasratain) bertemu huruf Lam (ل)</td>
+                                <td class="p-3.5 text-xs text-slate-600">Dimasukkan tanpa berdengung</td>
+                                <td class="p-3.5 text-center">
+                                    <button onclick="playTajwidSpeech('لَآيَاتٍ لِّأُولِي', 'Idgham Bilaghunnah')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1 mx-auto transition-all">
+                                        <i class="fa-solid fa-volume-low"></i> Dengar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-all">
+                                <td class="p-3.5 font-bold text-slate-500">7</td>
+                                <td class="p-3.5 font-arabic text-xl text-teal-900 font-bold">لِّأُولِي الْأَلْبَابِ</td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 bg-purple-100 text-purple-800 rounded-md font-semibold text-xs">Qalqalah Kubra</span></td>
+                                <td class="p-3.5 text-xs text-slate-600">Huruf Ba (ب) sukun di akhir ayat karena waqaf</td>
+                                <td class="p-3.5 text-xs text-slate-600">Memantul dengan kuat</td>
+                                <td class="p-3.5 text-center">
+                                    <button onclick="playTajwidSpeech('لِّأُولِي الْأَلْبَابِ', 'Qalqalah Kubra')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1 mx-auto transition-all">
+                                        <i class="fa-solid fa-volume-low"></i> Dengar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-all">
+                                <td class="p-3.5 font-bold text-slate-500">8</td>
+                                <td class="p-3.5 font-arabic text-xl text-teal-900 font-bold">قِيَامًا وَقُعُودًا</td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 bg-green-100 text-green-800 rounded-md font-semibold text-xs">Idgham Bighunnah</span></td>
+                                <td class="p-3.5 text-xs text-slate-600">Tanwin (Fathatain) bertemu huruf Wawu (و)</td>
+                                <td class="p-3.5 text-xs text-slate-600">Dimasukkan dengan berdengung 2 harakat</td>
+                                <td class="p-3.5 text-center">
+                                    <button onclick="playTajwidSpeech('قِيَامًا وَقُعُودًا', 'Idgham Bighunnah')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1 mx-auto transition-all">
+                                        <i class="fa-solid fa-volume-low"></i> Dengar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-all">
+                                <td class="p-3.5 font-bold text-slate-500">9</td>
+                                <td class="p-3.5 font-arabic text-xl text-teal-900 font-bold">جُنُوبِهِمْ وَيَتَفَكَّرُونَ</td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 bg-blue-100 text-blue-800 rounded-md font-semibold text-xs">Izhar Syafawi</span></td>
+                                <td class="p-3.5 text-xs text-slate-600">Mim sukun (مْ) bertemu huruf Wawu (و)</td>
+                                <td class="p-3.5 text-xs text-slate-600">Dibaca jelas di bibir tanpa dengung</td>
+                                <td class="p-3.5 text-center">
+                                    <button onclick="playTajwidSpeech('جُنُوبِهِمْ وَيَتَفَكَّرُونَ', 'Izhar Syafawi')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1 mx-auto transition-all">
+                                        <i class="fa-solid fa-volume-low"></i> Dengar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-all">
+                                <td class="p-3.5 font-bold text-slate-500">10</td>
+                                <td class="p-3.5 font-arabic text-xl text-teal-900 font-bold">خَلَقْتَ</td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 bg-orange-100 text-orange-800 rounded-md font-semibold text-xs">Qalqalah Sughra</span></td>
+                                <td class="p-3.5 text-xs text-slate-600">Huruf Qaf (قْ) sukun asli di tengah kata</td>
+                                <td class="p-3.5 text-xs text-slate-600">Memantul dengan ringan</td>
+                                <td class="p-3.5 text-center">
+                                    <button onclick="playTajwidSpeech('خَلَقْتَ', 'Qalqalah Sughra')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1 mx-auto transition-all">
+                                        <i class="fa-solid fa-volume-low"></i> Dengar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-all">
+                                <td class="p-3.5 font-bold text-slate-500">11</td>
+                                <td class="p-3.5 font-arabic text-xl text-teal-900 font-bold">بَاطِلًا سُبْحَانَكَ</td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 bg-fuchsia-100 text-fuchsia-800 rounded-md font-semibold text-xs">Ikhfa' Haqiqi</span></td>
+                                <td class="p-3.5 text-xs text-slate-600">Tanwin bertemu huruf Sin (س)</td>
+                                <td class="p-3.5 text-xs text-slate-600">Samar-samar disertai dengung</td>
+                                <td class="p-3.5 text-center">
+                                    <button onclick="playTajwidSpeech('بَاطِلًا سُبْحَانَكَ', 'Ikhfa Haqiqi')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold flex items-center gap-1 mx-auto transition-all">
+                                        <i class="fa-solid fa-volume-low"></i> Dengar
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PENJELASAN ULIL ALBAB -->
+        <section id="content-ulilalbab" class="tab-content space-y-6 hidden">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/80">
+                <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
+                    <div class="p-3 bg-teal-100 text-teal-800 rounded-xl">
+                        <i class="fa-solid fa-brain text-2xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Siapakah "Ulil Albab"?</h2>
+                        <p class="text-slate-500 text-sm">Etimologi, Karakteristik Utama, dan Relevansi untuk Pelajar Modern</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <!-- Makna Bahasa -->
+                    <div class="bg-teal-50/70 p-6 rounded-2xl border border-teal-100">
+                        <h3 class="font-bold text-teal-900 mb-3 text-lg flex items-center gap-2">
+                            <i class="fa-solid fa-book"></i> Makna Bahasa & Istilah
+                        </h3>
+                        <p class="text-sm text-slate-700 leading-relaxed mb-3">
+                            Secara etimologi, kata <strong>Ulil Albab</strong> (أُولِي الْأَلْبَابِ) terdiri dari dua kata:
+                        </p>
+                        <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside bg-white p-4 rounded-xl border border-teal-100">
+                            <li><strong>Uli (أُولي):</strong> Pemilik, orang yang mempunyai.</li>
+                            <li><strong>Al-Albab (الْأَلْبَابِ):</strong> Bentuk jamak dari kata <em>Lubb</em> (لُبّ), yang berarti inti, saripati, akal murni yang bersih dari prasangka dan hawa nafsu.</li>
+                        </ul>
+                        <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                            Maka, <strong>Ulil Albab</strong> adalah orang-orang yang memiliki akal murni, tajam, dan bercahaya, yang tidak hanya menyerap informasi visual tetapi mampu menembus hakikat di balik fenomena alam.
+                        </p>
+                    </div>
+
+                    <!-- 2 Pilar Ulil Albab -->
+                    <div class="bg-amber-50/70 p-6 rounded-2xl border border-amber-100">
+                        <h3 class="font-bold text-amber-900 mb-3 text-lg flex items-center gap-2">
+                            <i class="fa-solid fa-scale-balanced"></i> Dua Pilar Utama Ulil Albab
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="bg-white p-3.5 rounded-xl border border-amber-200">
+                                <div class="font-bold text-teal-800 text-sm mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-heart text-rose-500"></i> 1. Zikir (Olah Hati & Spiritual)
+                                </div>
+                                <p class="text-xs text-slate-600">
+                                    Selalu mengingat Allah SWT dalam segala aktivitas dan dimensi waktu—baik saat berdiri, duduk, maupun berbaring (<em>qiyāmaw wa qu'ūdaw wa 'alā junūbihim</em>).
+                                </p>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-amber-200">
+                                <div class="font-bold text-teal-800 text-sm mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-microscope text-sky-500"></i> 2. Fikir (Olah Akal & Intelektual)
+                                </div>
+                                <p class="text-xs text-slate-600">
+                                    Melakukan perenungan (tadabbur), analisis saintifik, dan pengamatan kritis terhadap penciptaan alam semesta (<em>yatafakkarūna fī khalqis-samāwāti wal-arḍ</em>).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indikator Ulil Albab -->
+                <div class="border border-slate-200 rounded-2xl p-6 bg-slate-50">
+                    <h3 class="font-bold text-slate-900 mb-4 text-base flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-emerald-600"></i> 4 Karakteristik Ulil Albab dalam Q.S. Ali 'Imran: 190-191
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div class="bg-white p-4 rounded-xl border border-slate-200">
+                            <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-800 font-bold flex items-center justify-center mb-2 text-sm">1</div>
+                            <h4 class="font-bold text-xs text-slate-800 mb-1">Konektivitas Spiritual</h4>
+                            <p class="text-xs text-slate-500">Mengingat Allah tanpa batas waktu dan ruang dalam kehidupan sehari-hari.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200">
+                            <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-800 font-bold flex items-center justify-center mb-2 text-sm">2</div>
+                            <h4 class="font-bold text-xs text-slate-800 mb-1">Keingintahuan Ilmiah</h4>
+                            <p class="text-xs text-slate-500">Sensitif terhadap fenomena alam, pergantian siang-malam, dan hukum alam.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200">
+                            <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-800 font-bold flex items-center justify-center mb-2 text-sm">3</div>
+                            <h4 class="font-bold text-xs text-slate-800 mb-1">Kesimpulan Tauhid</h4>
+                            <p class="text-xs text-slate-500">Yakin tidak ada ciptaan Allah yang sia-sia (<em>mā khalaqta hādhā bāṭilā</em>).</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200">
+                            <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-800 font-bold flex items-center justify-center mb-2 text-sm">4</div>
+                            <h4 class="font-bold text-xs text-slate-800 mb-1">Sikap Tunduk & Tawadhu'</h4>
+                            <p class="text-xs text-slate-500">Selalu berdoa memohon perlindungan dari api neraka dan terhindar dari kesombongan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. OPINI BERPIKIR KRITIS -->
+        <section id="content-opini" class="tab-content space-y-6 hidden">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/80">
+                <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
+                    <div class="p-3 bg-emerald-100 text-emerald-800 rounded-xl">
+                        <i class="fa-solid fa-newspaper text-2xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Opini: Vitalnya Berpikir Kritis bagi Generasi Muda</h2>
+                        <p class="text-slate-500 text-sm">Kajian Reflektif PAI SMAN 1 Depok Yogyakarta di Era Informasi & Disrupsi AI</p>
+                    </div>
+                </div>
+
+                <div class="prose max-w-none text-slate-700 space-y-4 text-sm leading-relaxed">
+                    <div class="bg-gradient-to-r from-teal-50 to-emerald-50 border-l-4 border-teal-600 p-4 rounded-r-xl">
+                        <p class="italic text-teal-900 font-medium">
+                            "Berpikir kritis dalam konteks Islam bukanlah keraguan yang destruktif, melainkan keberanian intelektual untuk mencari kebenaran hakiki yang membimbing manusia menuju tauhid dan kemaslahatan."
+                        </p>
+                    </div>
+
+                    <h3 class="text-base font-bold text-slate-900 pt-2">1. Menjawab Tantangan Era Informasi dan Hoaks</h3>
+                    <p>
+                        Di era ledakan informasi modern, kita dibanjiri jutaan data setiap detik melalui media sosial dan kecerdasan buatan. Tanpa budaya berpikir kritis (<em>tafakur</em> dan <em>tabayyun</em>), siswa sangat rentan terjebak dalam disinformasi, hoaks, dan manipulasi opini. Ayat 190 Surah Ali 'Imran mengajarkan bahwa keteraturan alam semesta membutuhkan pengamatan mendalam, bukan sekadar penerimaan pasif. Siswa SMAN 1 Depok Yogyakarta harus menjadi pribadi yang mampu melakukan pemilahan informasi secara rasional dan objektif.
+                    </p>
+
+                    <h3 class="text-base font-bold text-slate-900 pt-2">2. Keseimbangan Antara Sains dan Nilai Moral-Spiritual</h3>
+                    <p>
+                        Berpikir kritis tanpa landasan iman berisiko melahirkan rasionalisme sekuler yang kering dari nilai moral. Sebaliknya, keagamaan tanpa nalar kritis berisiko memicu dogma buta dan fanatisme. Q.S. Ali 'Imran: 191 memadukan <strong>zikir dan pikir</strong> secara seimbang. Olah nalar sains menemukan hukum-hukum alam, sedangkan olah zikir memastikan bahwa penemuan tersebut dimanfaatkan untuk kelestarian bumi, bukan untuk kerusakan atau perang.
+                    </p>
+
+                    <h3 class="text-base font-bold text-slate-900 pt-2">3. Relevansi bagi Siswa SMAN 1 Depok Yogyakarta</h3>
+                    <p>
+                        Sebagai bagian dari komunitas pelajar unggul di Yogyakarta, siswa SMAN 1 Depok dituntut tidak hanya berprestasi secara akademis, tetapi juga memiliki kepekaan sosial dan kecendekiawanan Islam. Berpikir kritis di bangku sekolah diwujudkan melalui:
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 pl-2 text-slate-600">
+                        <li>Bertanya secara analitis terhadap fenomena alam dan sosial di sekitar.</li>
+                        <li>Riset ilmiah yang jujur, rasional, dan bertanggung jawab.</li>
+                        <li>Sikap bijak dalam bermedia sosial dengan selalu melakukan klarifikasi (tabayyun).</li>
+                        <li>Membantu memecahkan masalah masyarakat dengan solusi inovatif berbasis syariat dan ilmu pengetahuan.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. AKTIVITAS SISWA -->
+        <section id="content-aktivitas" class="tab-content space-y-6 hidden">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/80">
+                <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
+                    <div class="p-3 bg-purple-100 text-purple-800 rounded-xl">
+                        <i class="fa-solid fa-users-gear text-2xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Lembar Kerja & Aktivitas Siswa (LKPD)</h2>
+                        <p class="text-slate-500 text-sm">Kerjakan tugas mandiri dan diskusi kelompok berikut sebagai bukti portofolio pembelajaran</p>
+                    </div>
+                </div>
+
+                <!-- AKTIVITAS 1: MANDIRI -->
+                <div class="mb-8 border border-slate-200 rounded-2xl p-6 bg-slate-50">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 bg-purple-800 text-white text-xs font-bold rounded-lg">Aktivitas 1: Mandiri</span>
+                        <span class="text-xs text-slate-500"><i class="fa-regular fa-clock"></i> Estimasi: 20 Menit</span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Tadabbur Alam & Jurnal Refleksi Kritis</h3>
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                        Amati satu fenomena alam di lingkungan sekitar rumah atau SMA Negeri 1 Depok (misalnya: siklus pergantian cuaca di Yogyakarta, sistem peneduh pohon di lingkungan sekolah, atau keunikan bentuk daun). Jawablah pertanyaan reflektif berikut pada buku catatan PAI Anda:
+                    </p>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-3 text-xs text-slate-700">
+                        <p><strong>Pertanyaan 1:</strong> Deskripsikan fenomena alam yang kamu amati secara rinci!</p>
+                        <p><strong>Pertanyaan 2:</strong> Hukum alam (ilmu pengetahuan) apa yang bekerja pada fenomena tersebut?</p>
+                        <p><strong>Pertanyaan 3:</strong> Bagaimana fenomena ini membuktikan ungkapan <em>"Rabbana ma khalaqta hadha batila"</em> (Ya Tuhan kami, tidak ada yang Engkau ciptakan sia-sia)?</p>
+                    </div>
+                </div>
+
+                <!-- AKTIVITAS 2: KELOMPOK -->
+                <div class="border border-slate-200 rounded-2xl p-6 bg-slate-50">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 bg-teal-800 text-white text-xs font-bold rounded-lg">Aktivitas 2: Kelompok (4-5 Siswa)</span>
+                        <span class="text-xs text-slate-500"><i class="fa-regular fa-clock"></i> Estimasi: 40 Menit</span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Studi Kasus: Analisis Berita & Tabayyun Digital</h3>
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                        Diskusikan bersama kelompok Anda mengenai isu disinformasi/hoaks terbaru yang beredar di masyarakat Yogyakarta atau media sosial. Isilah format analisis berikut:
+                    </p>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left bg-white rounded-xl border border-slate-200 text-xs">
+                            <thead class="bg-slate-100 text-slate-700 font-bold">
+                                <tr>
+                                    <th class="p-3">Aspek Analisis</th>
+                                    <th class="p-3">Hasil Diskusi Kelompok</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200">
+                                <tr>
+                                    <td class="p-3 font-semibold text-teal-800">Judul Berita / Isu Viral</td>
+                                    <td class="p-3 text-slate-500">[Tuliskan topik berita yang dianalisis]</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-semibold text-teal-800">Langkah Verifikasi (Tabayyun)</td>
+                                    <td class="p-3 text-slate-500">[Sebutkan sumber resmi/metode cek fakta yang digunakan]</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-semibold text-teal-800">Ciri Ketidakrasionalan Isu</td>
+                                    <td class="p-3 text-slate-500">[Temuan kejanggalan logika / data]</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-semibold text-teal-800">Sikap Ulil Albab yang Tepat</td>
+                                    <td class="p-3 text-slate-500">[Tindakan yang seharusnya diambil sesuai nilai Q.S. Ali 'Imran 190-191]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. KUIS INTERAKTIF (10 SOAL) -->
+        <section id="content-kuis" class="tab-content space-y-6 hidden">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/80">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 pb-4 border-b border-slate-100">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Kuis Evaluasi Interaktif (10 Soal)</h2>
+                        <p class="text-slate-500 text-sm">Uji pemahaman Anda mengenai Q.S. Ali 'Imran: 190-191, Tajwid, dan Ulil Albab</p>
+                    </div>
+                    <div id="score-badge" class="hidden px-4 py-2 bg-emerald-100 text-emerald-800 font-bold rounded-xl text-sm border border-emerald-300">
+                        Skor Anda: <span id="user-score">0</span> / 100
+                    </div>
+                </div>
+
+                <form id="quiz-form" class="space-y-6">
+                    <!-- SOAL 1 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+                        <p class="font-semibold text-slate-800 text-sm mb-3">1. Perhatikan potong ayat berikut: <span class="font-arabic text-xl font-bold text-teal-800 dir-rtl">إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ</span>. Hukum tajwid pada kata <span class="font-arabic text-lg font-bold">إِنَّ</span> adalah...</p>
+                        <div class="space-y-2 text-xs">
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q1" value="A" class="mr-2.5 text-teal-600"> A. Izhar Halqi
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q1" value="B" class="mr-2.5 text-teal-600"> B. Ghunnah
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q1" value="C" class="mr-2.5 text-teal-600"> C. Idgham Bighunnah
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q1" value="D" class="mr-2.5 text-teal-600"> D. Ikhfa' Syafawi
+                            </label>
+                        </div>
+                        <div id="feedback-q1" class="hidden mt-3 p-3 text-xs rounded-lg"></div>
+                    </div>
+
+                    <!-- SOAL 2 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+                        <p class="font-semibold text-slate-800 text-sm mb-3">2. Makna secara etimologis dari kata <em>"Al-Albab"</em> (الْأَلْبَابِ) yang merupakan bentuk jamak dari <em>"Lubb"</em> adalah...</p>
+                        <div class="space-y-2 text-xs">
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q2" value="A" class="mr-2.5 text-teal-600"> A. Penglihatan mata yang tajam
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q2" value="B" class="mr-2.5 text-teal-600"> B. Pendengaran yang peka
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q2" value="C" class="mr-2.5 text-teal-600"> C. Akal murni / inti kesadaran terbersih
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q2" value="D" class="mr-2.5 text-teal-600"> D. Kekuatan fisik yang tangguh
+                            </label>
+                        </div>
+                        <div id="feedback-q2" class="hidden mt-3 p-3 text-xs rounded-lg"></div>
+                    </div>
+
+                    <!-- SOAL 3 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+                        <p class="font-semibold text-slate-800 text-sm mb-3">3. Dua aktivitas utama yang dilakukan oleh Ulil Albab sebagaimana dijelaskan pada Q.S. Ali 'Imran ayat 191 adalah...</p>
+                        <div class="space-y-2 text-xs">
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q3" value="A" class="mr-2.5 text-teal-600"> A. Zikir dan Fikir (Mengingat Allah & Memikirkan ciptaan-Nya)
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q3" value="B" class="mr-2.5 text-teal-600"> B. Bekerja dan Berdoa
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q3" value="C" class="mr-2.5 text-teal-600"> C. Membaca dan Menulis
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q3" value="D" class="mr-2.5 text-teal-600"> D. Diskusi dan Debat
+                            </label>
+                        </div>
+                        <div id="feedback-q3" class="hidden mt-3 p-3 text-xs rounded-lg"></div>
+                    </div>
+
+                    <!-- SOAL 4 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+                        <p class="font-semibold text-slate-800 text-sm mb-3">4. Lafaz <span class="font-arabic text-lg font-bold text-teal-800">لَآيَاتٍ لِّأُولِي</span> mengandung hukum tajwid...</p>
+                        <div class="space-y-2 text-xs">
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q4" value="A" class="mr-2.5 text-teal-600"> A. Idgham Bighunnah
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q4" value="B" class="mr-2.5 text-teal-600"> B. Idgham Bilaghunnah
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q4" value="C" class="mr-2.5 text-teal-600"> C. Iqlab
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q4" value="D" class="mr-2.5 text-teal-600"> D. Izhar Halqi
+                            </label>
+                        </div>
+                        <div id="feedback-q4" class="hidden mt-3 p-3 text-xs rounded-lg"></div>
+                    </div>
+
+                    <!-- SOAL 5 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+                        <p class="font-semibold text-slate-800 text-sm mb-3">5. Penggalan ungkapan doa Ulil Albab <span class="font-arabic text-lg font-bold text-teal-800">رَبَّنَا مَا خَلَقْتَ هَٰذَا بَاطِلًا</span> menegaskan keyakinan bahwa...</p>
+                        <div class="space-y-2 text-xs">
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q5" value="A" class="mr-2.5 text-teal-600"> A. Alam semesta diciptakan secara kebetulan semata
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q5" value="B" class="mr-2.5 text-teal-600"> B. Seluruh ciptaan Allah pasti memiliki tujuan dan tidak ada yang sia-sia
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q5" value="C" class="mr-2.5 text-teal-600"> C. Manusia bebas mengeksploitasi alam tanpa batas
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q5" value="D" class="mr-2.5 text-teal-600"> D. Bencana alam adalah hal biasa tanpa hikmah
+                            </label>
+                        </div>
+                        <div id="feedback-q5" class="hidden mt-3 p-3 text-xs rounded-lg"></div>
+                    </div>
+
+                    <!-- SOAL 6 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+                        <p class="font-semibold text-slate-800 text-sm mb-3">6. Pada kata <span class="font-arabic text-lg font-bold text-teal-800">خَلَقْتَ</span> terdapat hukum tajwid Qalqalah Sughra karena...</p>
+                        <div class="space-y-2 text-xs">
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q6" value="A" class="mr-2.5 text-teal-600"> A. Huruf Qaf berharakat sukun asli berada di tengah kata
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q6" value="B" class="mr-2.5 text-teal-600"> B. Huruf Ba sukun di akhir kalimat karena diwaqafkan
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q6" value="C" class="mr-2.5 text-teal-600"> C. Huruf Ta berharakat fathah
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q6" value="D" class="mr-2.5 text-teal-600"> D. Huruf Kha bertasydid
+                            </label>
+                        </div>
+                        <div id="feedback-q6" class="hidden mt-3 p-3 text-xs rounded-lg"></div>
+                    </div>
+
+                    <!-- SOAL 7 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+                        <p class="font-semibold text-slate-800 text-sm mb-3">7. Salah satu contoh penerapan sikap berpikir kritis yang sesuai dengan ajaran Islam saat menerima berita di internet adalah...</p>
+                        <div class="space-y-2 text-xs">
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q7" value="A" class="mr-2.5 text-teal-600"> A. Langsung menyebarkannya ke grup percakapan agar terhindar dari ketinggalan informasi
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q7" value="B" class="mr-2.5 text-teal-600"> B. Melakukan tabayyun (klarifikasi) dan memverifikasi kebenaran data dari sumber terpercaya
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q7" value="C" class="mr-2.5 text-teal-600"> C. Mengabaikan semua berita tanpa peduli kebenarannya
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q7" value="D" class="mr-2.5 text-teal-600"> D. Mempercayai berita selama sesuai dengan pendapat pribadi
+                            </label>
+                        </div>
+                        <div id="feedback-q7" class="hidden mt-3 p-3 text-xs rounded-lg"></div>
+                    </div>
+
+                    <!-- SOAL 8 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+                        <p class="font-semibold text-slate-800 text-sm mb-3">8. Hukum tajwid pada lafaz <span class="font-arabic text-lg font-bold text-teal-800">قِيَامًا وَقُعُودًا</span> adalah...</p>
+                        <div class="space-y-2 text-xs">
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q8" value="A" class="mr-2.5 text-teal-600"> A. Idgham Bilaghunnah
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q8" value="B" class="mr-2.5 text-teal-600"> B. Idgham Bighunnah
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q8" value="C" class="mr-2.5 text-teal-600"> C. Izhar Halqi
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q8" value="D" class="mr-2.5 text-teal-600"> D. Ikhfa' Haqiqi
+                            </label>
+                        </div>
+                        <div id="feedback-q8" class="hidden mt-3 p-3 text-xs rounded-lg"></div>
+                    </div>
+
+                    <!-- SOAL 9 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+                        <p class="font-semibold text-slate-800 text-sm mb-3">9. Urutan tiga kondisi fisik manusia dalam berzikir yang disebutkan dalam Q.S. Ali 'Imran: 191 adalah...</p>
+                        <div class="space-y-2 text-xs">
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q9" value="A" class="mr-2.5 text-teal-600"> A. Berdiri, duduk, dan berbaring
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q9" value="B" class="mr-2.5 text-teal-600"> B. Berjalan, berlari, dan melompat
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q9" value="C" class="mr-2.5 text-teal-600"> C. Shalat, puasa, dan zakat
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q9" value="D" class="mr-2.5 text-teal-600"> D. Tidur, bangun, dan mandi
+                            </label>
+                        </div>
+                        <div id="feedback-q9" class="hidden mt-3 p-3 text-xs rounded-lg"></div>
+                    </div>
+
+                    <!-- SOAL 10 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+                        <p class="font-semibold text-slate-800 text-sm mb-3">10. Penutup doa dalam Q.S. Ali 'Imran: 191 memohon perlindungan dari...</p>
+                        <div class="space-y-2 text-xs">
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q10" value="A" class="mr-2.5 text-teal-600"> A. Kemiskinan harta
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q10" value="B" class="mr-2.5 text-teal-600"> B. Kegagalan ujian sekolah
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q10" value="C" class="mr-2.5 text-teal-600"> C. Azab api neraka (<em>'adhāban-nār</em>)
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-teal-50 cursor-pointer">
+                                <input type="radio" name="q10" value="D" class="mr-2.5 text-teal-600"> D. Fitnah sesama manusia
+                            </label>
+                        </div>
+                        <div id="feedback-q10" class="hidden mt-3 p-3 text-xs rounded-lg"></div>
+                    </div>
+
+                    <div class="pt-4 flex gap-4">
+                        <button type="button" onclick="evaluateQuiz()" class="px-6 py-3 bg-teal-700 hover:bg-teal-800 text-white rounded-xl text-sm font-bold shadow-md transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Periksa Jawaban Kuis
+                        </button>
+                        <button type="button" onclick="resetQuiz()" class="px-5 py-3 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-xl text-sm font-semibold transition-all">
+                            Reset Jawaban
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-xs text-center">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p class="font-semibold text-slate-300">Media Pembelajaran Interaktif PAI & Budi Pekerti — Disusun Oleh: <strong>Alwi Mushthofa, S.Pd.I., M.Pd.</strong></p>
+            <p>SMA Negeri 1 Depok Yogyakarta • Materi Kurikulum Merdeka (Q.S. Ali 'Imran: 190-191)</p>
+            <p class="text-slate-600">© 2026 SMAN 1 Depok Sleman, D.I. Yogyakarta. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Tab Switcher Logic
+        function switchTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(`content-${tabId}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Real MP3 Audio Quran Player (Mishary Rashid Alafasy via EveryAyah CDN)
+        let currentAudio = null;
+
+        const ayahAudioUrls = {
+            '190': 'https://everyayah.com/data/Alafasy_128kbps/003190.mp3',
+            '191': 'https://everyayah.com/data/Alafasy_128kbps/003191.mp3'
+        };
+
+        function stopAudio() {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentAudio = null;
+            }
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+            showToast('Audio dihentikan');
+        }
+
+        function playAyahAudio(ayahNum) {
+            stopAudio();
+            if (ayahAudioUrls[ayahNum]) {
+                currentAudio = new Audio(ayahAudioUrls[ayahNum]);
+                showToast(`Memutar Tilawah Ayat ${ayahNum}...`);
+                
+                currentAudio.play().catch(error => {
+                    console.error("Audio playback error:", error);
+                    showToast("Gagal memutar audio. Pastikan perangkat terhubung ke internet.");
+                });
+
+                currentAudio.onended = () => {
+                    showToast(`Selesai memutar Ayat ${ayahNum}`);
+                };
+            }
+        }
+
+        function playFullAyahAudio() {
+            stopAudio();
+            showToast("Memutar Tilawah Q.S. Ali 'Imran: 190 - 191...");
+
+            // Play Ayat 190 first, then chain to Ayat 191
+            currentAudio = new Audio(ayahAudioUrls['190']);
+            currentAudio.play().catch(error => {
+                showToast("Gagal memutar audio. Cek koneksi internet.");
+            });
+
+            currentAudio.onended = () => {
+                showToast("Memutar Lanjutan Ayat 191...");
+                currentAudio = new Audio(ayahAudioUrls['191']);
+                currentAudio.play();
+                currentAudio.onended = () => {
+                    showToast("Selesai memutar Q.S. Ali 'Imran: 190-191");
+                };
+            };
+        }
+
+        // Text-to-speech fallback for Tajweed pronunciation simulation
+        function playTajwidSpeech(lafaz, tajwidName) {
+            stopAudio();
+            if ('speechSynthesis' in window) {
+                let utterance = new SpeechSynthesisUtterance(lafaz);
+                utterance.lang = 'ar-SA';
+                utterance.rate = 0.75;
+                showToast(`Pelafalan Tajwid: ${tajwidName} (${lafaz})`);
+                window.speechSynthesis.speak(utterance);
+            } else {
+                showToast(`Tajwid: ${tajwidName} (${lafaz})`);
+            }
+        }
+
+        function showToast(msg) {
+            const existingToast = document.getElementById('audio-toast');
+            if (existingToast) existingToast.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'audio-toast';
+            toast.className = 'fixed bottom-5 right-5 bg-teal-900 text-white px-4 py-3 rounded-xl shadow-2xl text-xs flex items-center gap-2 border border-teal-500 z-50 animate-bounce';
+            toast.innerHTML = `<i class="fa-solid fa-volume-high text-amber-400"></i> <span>${msg}</span>`;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                if (toast) toast.remove();
+            }, 3500);
+        }
+
+        // Kuis Evaluation Logic
+        const correctAnswers = {
+            q1: "B", // Ghunnah
+            q2: "C", // Akal murni
+            q3: "A", // Zikir & Fikir
+            q4: "B", // Idgham Bilaghunnah
+            q5: "B", // Ciptaan tidak sia-sia
+            q6: "A", // Qalqalah Sughra
+            q7: "B", // Tabayyun
+            q8: "B", // Idgham Bighunnah
+            q9: "A", // Berdiri, duduk, berbaring
+            q10: "C" // Azab neraka
+        };
+
+        const explanations = {
+            q1: "Jawaban B Benar. Terdapat Nun bertasydid (نَّ) yang dibaca berdengung (Ghunnah).",
+            q2: "Jawaban C Benar. Al-Albab berasal dari kata 'lubb' yang berarti inti/akal murni.",
+            q3: "Jawaban A Benar. Ayat 191 menyebutkan aktivitas zikir (mengingat Allah) dan fikir (memikirkan penciptaan langit dan bumi).",
+            q4: "Jawaban B Benar. Tanwin bertemu dengan huruf Lam (ل) merupakan hukum Idgham Bilaghunnah (lebur tanpa dengung).",
+            q5: "Jawaban B Benar. Membuktikan bahwa segala ciptaan Allah sarat makna dan hikmah.",
+            q6: "Jawaban A Benar. Qaf sukun (قْ) adalah huruf qalqalah asli di tengah kata.",
+            q7: "Jawaban B Benar. Berpikir kritis islami mewajibkan proses tabayyun (klarifikasi).",
+            q8: "Jawaban B Benar. Tanwin bertemu Wawu (و) adalah Idgham Bighunnah.",
+            q9: "Jawaban A Benar. Dituliskan dalam ayat: qiyāmaw wa qu'ūdaw wa 'alā junūbihim (berdiri, duduk, berbaring).",
+            q10: "Jawaban C Benar. Doa penutup ayat meminta perlindungan dari adhaban-nar (siksa neraka)."
+        };
+
+        function evaluateQuiz() {
+            let score = 0;
+            let total = 10;
+
+            for (let i = 1; i <= total; i++) {
+                const qKey = `q${i}`;
+                const selected = document.querySelector(`input[name="${qKey}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback-${qKey}`);
+
+                feedbackDiv.classList.remove('hidden', 'bg-emerald-100', 'text-emerald-800', 'bg-rose-100', 'text-rose-800');
+
+                if (selected) {
+                    if (selected.value === correctAnswers[qKey]) {
+                        score += 10;
+                        feedbackDiv.classList.add('bg-emerald-100', 'text-emerald-900', 'border', 'border-emerald-300');
+                        feedbackDiv.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-600"></i> <strong>Benar!</strong> ${explanations[qKey]}`;
+                    } else {
+                        feedbackDiv.classList.add('bg-rose-100', 'text-rose-900', 'border', 'border-rose-300');
+                        feedbackDiv.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-600"></i> <strong>Kurang Tepat.</strong> Jawaban benar adalah <strong>${correctAnswers[qKey]}</strong>. ${explanations[qKey]}`;
+                    }
+                } else {
+                    feedbackDiv.classList.add('bg-amber-100', 'text-amber-900', 'border', 'border-amber-300');
+                    feedbackDiv.innerHTML = `<i class="fa-solid fa-circle-exclamation text-amber-600"></i> <strong>Belum Dijawab!</strong> Jawaban yang benar adalah <strong>${correctAnswers[qKey]}</strong>. ${explanations[qKey]}`;
+                }
+            }
+
+            const scoreBadge = document.getElementById('score-badge');
+            const scoreVal = document.getElementById('user-score');
+            scoreBadge.classList.remove('hidden');
+            scoreVal.innerText = score;
+
+            showToast(`Evaluasi selesai! Skor Anda: ${score}/100`);
+        }
+
+        function resetQuiz() {
+            document.getElementById('quiz-form').reset();
+            for (let i = 1; i <= 10; i++) {
+                const feedbackDiv = document.getElementById(`feedback-q${i}`);
+                if (feedbackDiv) feedbackDiv.classList.add('hidden');
+            }
+            document.getElementById('score-badge').classList.add('hidden');
+            showToast('Jawaban kuis telah direset.');
+        }
+    </script>
+</body>
+</html>
